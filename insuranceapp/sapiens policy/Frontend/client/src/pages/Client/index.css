@@ -1,0 +1,19 @@
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color:rgb(168, 199, 240) !important;
+    
+    
+  }
+  .desc{
+    background-color:rgb(239, 188, 205);
+    width: 100%;
+    Height: 50%;
+  }
+  .package{
+      margin-top: 0%;
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+  .badge{
+    background-color: black;
+  }

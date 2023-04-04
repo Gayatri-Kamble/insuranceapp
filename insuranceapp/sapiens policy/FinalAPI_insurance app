@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "c34489f1-c68d-420e-a84a-f1c2999bc5a8",
+		"name": "FinalAPI_OnlineTourismServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":  \"sap@gmail.com\",\r\n     \"password\" : \"sap@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dob\": \"1998-11-03\",\r\n    \"address\": \"Pune\",\r\n    \"age\" : 23,\r\n    \"email\": \"vishvali@gmail.com\",\r\n    \"firstName\" : \"Vishvali\",\r\n    \"lastName\" : \"Kusangwar\",\r\n    \"gender\" : \"Female\",\r\n    \"mobileNo\" : \"966520852\",\r\n    \"password\": \"1234\",\r\n    \"role\" : \"USER\",\r\n    \"idProofDetails\":\"3434\",\r\n    \"idProofType\": \"aadhaar\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"address\": \"pune\",\r\n    \"age\" : 28,\r\n    \"email\": \"vishalkolte1@gmail.com\",\r\n    \"firstName\" : \"Vishal\",\r\n    \"lastName\" : \"Kolte\",\r\n    \"mobileNo\" : \"123451010\",\r\n    \"idProofDetails\": \"7845\",\r\n    \"idProofType\": \"aadhar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/updateProfile/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"updateProfile",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/userList",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"userList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/user/{id}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"rishikesh@gmail.com\",\r\n    \"idProofDetails\": \"3434\",\r\n    \"newPassword\": \"6789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/forgetPassword",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/user/userProfile/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"userProfile",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User History",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/userHistory/samiksha@test.com",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"userHistory",
+								"samiksha@test.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Packages",
+			"item": [
+				{
+					"name": "Add Package",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"packages\": {\r\n        \"name\": \"Australia\",\r\n        \"heading\": \"Australia Tourism\",\r\n        \"places\": \"Sydney, Melbourne, Perth\",\r\n        \"country\": \"Austria\",\r\n        \"description\": \"Tourism in Australia is an important part of the Australian economy, and comprises domestic and international visitors. Before Covid-19, in the financial year 2018/19, tourism was Australia's fourth-largest export and over the previous decade was growing faster than national GDP growth.[2] At the time it represented 3.1% of Australia's GDP contributing A$60.8 billion to the national economy.[3] Domestic tourism was and continues to be a significant part of the tourism industry, representing 73% of the total direct tourism GDP and has taken on an even greater role since the arrival of the Covid-19 pandemic impacted international tourist arrivals as Australia closed its international borders in March 2020. During the pandemic, Australians travelled intrastate and also interstate when borders were open. From November 2021, borders for Australia were opened and fully vaccinated Australians were permitted to fly overseas without exemption. A range of countries was added to New Zealand and   Singapore in December with citizens from Japan and South Korea allowed to enter the country, from 1 December 2021.\",\r\n        \"noOfDays\": 12,\r\n        \"packageType\": \"INTERNATIONAL_TOURS\",\r\n        \"packagePrice\": 100000,\r\n        \"imageLink\" : \"https://i.pinimg.com/originals/7d/78/48/7d784841146a09a797f99785970803ef.jpg\",\r\n        \"inclusion\": [\r\n            {\r\n                \"type\": \"Hotel facilities\"\r\n            },\r\n            {\r\n                \"type\": \"Visa\"\r\n            },\r\n            {\r\n                \"type\": \"Travelings\"\r\n            }\r\n        ],\r\n        \"adventure\": [\r\n            {\r\n                \"name\": \"Hang Gliding\"\r\n            },\r\n\t    {\r\n                \"name\": \"Mountain Biking\"\r\n            }\r\n        ]\r\n      \r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/addPackage",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"addPackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "International Package List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/internationalPackageList",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"internationalPackageList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Indian Package List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/indianPackageList",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"indianPackageList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Package",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/package/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"package",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Package List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/listPackage",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"listPackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Package",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/package/{id}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"package",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Add Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"samiksha@test.com\",\r\n    \"personCount\":1,\r\n    \"totalPrice\":25000,\r\n    \"person1\": [\r\n        {\r\n            \"age\" : 25,\r\n            \"idProofId\" : 25896,\r\n            \"mobileNo\" :\"7845859658\",\r\n            \"name\" :\"vishal\"\r\n\r\n        },\r\n        {\r\n            \r\n            \r\n\r\n        }\r\n    ]\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/booking/add/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"booking",
+								"add",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/booking/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bookings List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/bookingsList",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"bookingsList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/user/userHistory/{email}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"userHistory",
+								"{email}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "Add Rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"haridwar \",\r\n   \"description\":\"Om Bhaga Bhuge Bhagni Bhagodari Bhasmase yeoni Om Phat Swaha\",\r\n    \"userEmail\":\"v@g.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/rating/addRating",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"rating",
+								"addRating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rating",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"description\":\"bata na bhai\",\r\n\"title\":\"pata nahi bhai\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/rating/updateRating/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"rating",
+								"updateRating",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/rating/ratinglist",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"rating",
+								"ratinglist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Rating",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/rating/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"rating",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL\n",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "URL",
+			"value": "http://localhost:8080"
+		}
+	]
+}
